@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Sans", sans-serif;
+}
+/*  font-family: "Fira Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Oxygen", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Satisfy", cursive; 
+*/
+.nav-logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 15px;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+.dotted-hr {
+  border: dotted 6px white;
+  border-bottom: none;
+  margin: 20px auto;
+  width: 80px;
+}
+a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  text-align: justify;
+  padding: 10px;
+}
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+/* for mobile */
+[class*="col-"] {
+  width: 100%;
+  text-align: center;
+}
+/* navbar starts here */
+.navbar {
+  background-color: #0c6168;
+  text-align: center;
+  padding: 20px 7%;
+}
+.navbar::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.nav-heading h1 {
+  color: white;
+}
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.navbar-menu a {
+  background-color: #40868b;
+  border-radius: 10px;
+  margin: 7px 0px;
+  padding: 10px;
+}
+.navbar-menu a:hover {
+  background-color: grey;
+}
+/* navbar ends here */
+
+/* profile design starts here */
+.profile {
+  padding: 120px 20px;
+  position: relative;
+}
+.profile img {
+  width: 100px;
+  height: 100px;
+}
+.profile .top-weather-icon {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  transition: transform 2s;
+}
+.profile .top-weather-icon:hover {
+  transform: rotate(360deg);
+}
+.profile .bottom-weather-icon {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  transition: transform 2s;
+}
+.profile .bottom-weather-icon:hover {
+  transform: rotate(360deg);
+}
+.profile-desc h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 2.5rem;
+}
+
+.profile-desc p {
+  color: grey;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  width: 90%;
+}
+.profile::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+/* profile design ends here */
+
+/* AboutME design starts here */
+.about-me {
+  background-color: #39a4ac;
+  padding: 3% 7%;
+  color: white;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.aboutme-image img {
+  width: 200px;
+  height: 200px;
+  border: 5px solid black;
+  border-radius: 50%;
+  padding: 5px;
+}
+.aboutme-desc p {
+  text-align: center;
+  padding: 10px 15px 15px 0;
+}
+
+.cv-button {
+  background-color: #052d2f;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 15px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.about-me:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* AboutME design ends here */
+/* achievement starts here */
+.achievement {
+  padding: 2% 0%;
+}
+
+.achievement .card {
+  background-color: gray;
+  padding: 30px;
+  text-align: left;
+  border-radius: 20px;
+  /* height: 600px; */
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0px 4px 8px 5px black;
+}
+
+.card-icon {
+  text-align: center;
+}
+.card-icon img {
+  width: 100px;
+}
+
+.round-img {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.card-title h2 {
+  text-align: center;
+  background-color: #616161;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card-desc ol li {
+  padding: 20px;
+}
+.achievement::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+.skills-container li {
+  list-style-type: none;
+  font-weight: bolder;
+  margin: 30px 10px;
+  position: relative;
+}
+.skills-container li::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  height: 10px;
+  border-radius: 1000px;
+  background-color: rgb(86, 86, 153, 0.5);
+}
+.skills-container li::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 0;
+  height: 10px;
+  border-radius: 1000px;
+  background-color: rgb(86, 86, 153, 1);
+
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 3;
+  animation-fill-mode: forwards;
+}
+
+.skills-container li.html::after {
+  animation-name: html;
+}
+
+@keyframes html {
+  to {
+    width: 90%;
+    background-color: red;
+  }
+}
+.skills-container li.css::after {
+  animation-name: css;
+}
+
+@keyframes css {
+  to {
+    width: 80%;
+    background-color: green;
+  }
+}
+.skills-container li.bootstrap::after {
+  animation-name: boot;
+}
+
+@keyframes boot {
+  to {
+    width: 70%;
+    background-color: blue;
+  }
+}
+.skills-container li.js::after {
+  animation-name: js;
+}
+
+@keyframes js {
+  to {
+    width: 60%;
+    background-color: orange;
+  }
+}
+.skills-container li.nodejs::after {
+  animation-name: node;
+}
+
+@keyframes node {
+  to {
+    width: 50%;
+    background-color: darkolivegreen;
+  }
+}
+.skills-container li.jquery::after {
+  animation-name: jquery;
+}
+
+@keyframes jquery {
+  to {
+    width: 40%;
+    background-color: yellowgreen;
+  }
+}
+.skills-container li.git::after {
+  animation-name: git;
+}
+
+@keyframes git {
+  to {
+    width: 70%;
+    background-color: rgb(56, 163, 158);
+  }
+}
+/* achievement ends here */
+.achievement-contact {
+  background-color: olivedrab;
+  padding: 1% 7%;
+  color: white;
+}
+
+.contact {
+  text-align: center;
+}
+.contact input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+}
+
+.contact button {
+  background-color: #0c6168;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  width: 100px;
+}
+.achievement-contact::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.contact-link {
+  text-align: center;
+}
+.media-buttons .btn {
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 5px;
+  margin: 10px;
+  width: 50px;
+  background-color: white;
+}
+.btn:hover {
+  background-color: grey;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footer-menu a {
+  display: block;
+  font-size: 1rem;
+  margin: 15px 0;
+}
+.footer::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.footer-menu a:hover {
+  color: grey;
+}
